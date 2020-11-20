@@ -1,0 +1,48 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/stealth-ts/src",
+  "projects": {
+    "stealth-api": {
+      "type": "library",
+      "root": "libs/stealth-api",
+      "entryFile": "index",
+      "sourceRoot": "libs/stealth-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/stealth-api/tsconfig.lib.json"
+      }
+    },
+    "stealth-ts": {
+      "type": "application",
+      "root": "apps/stealth-ts",
+      "entryFile": "main",
+      "sourceRoot": "apps/stealth-ts/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/stealth-ts/tsconfig.app.json"
+      }
+    },
+    "stealth-ng": {
+      "type": "application",
+      "root": "apps/stealth-ng",
+      "entryFile": "main",
+      "sourceRoot": "apps/stealth-ng/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/stealth-ng/tsconfig.app.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/stealth-ts/tsconfig.app.json",
+    "assets": [
+      {
+        "include": "**/*.hbs",
+        "watchAssets": true
+      },
+      {
+        "include": "**/*.txt"
+      }
+    ]
+  },
+  "monorepo": true,
+  "root": "apps/stealth-ts"
+}

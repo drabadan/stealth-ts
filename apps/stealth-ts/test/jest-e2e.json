@@ -1,0 +1,17 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/stealth-api/(.*)": "<rootDir>/../libs/stealth-api/src/$1",
+    "@app/stealth-api": "<rootDir>/../libs/stealth-api/src"
+  }
+}
